@@ -1,4 +1,4 @@
-import { useConext, createContext } from 'react'
+import { useContext, createContext } from 'react'
 
 export const TodoContext = createContext({
     todos: [
@@ -11,11 +11,11 @@ export const TodoContext = createContext({
     addTodo: (todo) => { },
     updateToDo: (id, todo) => { },
     deleteToDo: (id) => { },
-    toggleComplete: (id) => { }
+    toggleCompleted: (id) => { }
 })
 
 export const useTodo = () => {
-    return useConext(TodoContext)
+    return useContext(TodoContext)
 }
 
 export const Todoprovider = TodoContext.Provider
